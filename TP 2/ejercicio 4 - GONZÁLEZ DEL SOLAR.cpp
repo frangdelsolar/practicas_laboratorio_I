@@ -13,15 +13,15 @@ main ()
 	
 	cout<<"Múltiplos de 3 (1 al 3000): "<<endl;
 	
-	// Not optimized
+	// Opción 1
 	for (int i=1; i<=3000; i++){
 		if(i%3==0){
 			cout<<i<<endl;
 		}
 	}
 
-	// Almost hard coded
-	for (int i=0; i<=3000; i+=3){
-		cout<<i<<endl;
-	}
+	// Opción 2
+//	for (int i=3; i<=3000; i+=3){
+//		cout<<i<<endl;
+//	}
 }

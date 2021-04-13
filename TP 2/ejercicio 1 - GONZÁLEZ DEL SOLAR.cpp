@@ -86,9 +86,6 @@ main ()
 		cout<<"Sería conveniente invertir en la propiedad"<<endl;
 	else
 		cout<<"No se recomienda invertir en la propiedad en este momento"<<endl;
-	
-	
+		
 	system("pause");
-	
-
 }

@@ -22,14 +22,20 @@ main ()
 	cout<<"3. Plan D"<<endl;
 	cout<<"4. Otro"<<endl;
 	cout<<"********************"<<endl;	
-	cin>>insurance;
+	do {
+		cin>>insurance;
+	} while (insurance < 1 || insurance > 4);
+	
 	
 	cout<<"**********************************"<<endl;
 	cout<<"El paciente, ¿abona en efectivo? "<<endl;
-	cout<<"(s). Sí"<<endl;
-	cout<<"(n). No"<<endl;
+	cout<<"Sí (s)"<<endl;
+	cout<<"No (n)"<<endl;
 	cout<<"********************"<<endl;	
-	cin>>is_cash;
+	do {
+		cin>>is_cash;
+	} while (is_cash != 's' && is_cash != 'n');
+	
 	
 	switch (insurance)
 	{
@@ -47,8 +53,7 @@ main ()
 		
 		case 4: // Otro
 			discount += 25;
-		break;
-		
+		break;		
 	}
 		
 	if (is_cash == 's')

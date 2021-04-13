@@ -20,14 +20,23 @@ main ()
 	cout<<"2. Viaje interprovincial"<<endl;
 	cout<<"3. Viaje internacional"<<endl;
 	cout<<"********************"<<endl;	
-	cin>>order_choice;
+	do {
+		cin>>order_choice;
+	} while (order_choice < 1 || order_choice > 3);
+	
 	
 	cout<<"Ingrese la cantidad de personas"<<endl;
-	cin>>people_amt;
+	do {
+		cin>>people_amt;
+	} while (people_amt <= 0);
+	
 	
 	cout<<"Ingrese la cantidad de días viajando"<<endl;
-	cin>>days_amt;
+	do {
+		cin>>days_amt;
+	} while (days_amt <= 0);
 	
+		
 	switch (order_choice)
 	{
 		case 1: // local
@@ -62,7 +71,7 @@ main ()
 				else
 					strcpy(reward, "Cupones de descuento");
 		break;	
-		
+			
 	}
 	
 	cout<<"Muchas gracias por contratar con nuestra agencia!"<<endl;
@@ -72,6 +81,5 @@ main ()
 		cout<<"Felicidades! Aquí tienes nuestro regalo"<<endl;
 		cout<<reward<<endl;
 	}
-	
 	
 }

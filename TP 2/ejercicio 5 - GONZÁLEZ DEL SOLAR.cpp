@@ -10,7 +10,7 @@ using namespace std;
 
 main ()
 {
-	int num, count, resto;
+	int num, multiple_count, remainder;
 	
 	do 
 	{
@@ -19,22 +19,16 @@ main ()
 	} while (num<=0);
 	
 
-	count = 0;
-	for (int i=0; i<=num; i++){
-		cout<<num<<"   "<<i<<endl;
-		
-		resto = num % i;
-		
-		cout<<resto<<endl;		
-//		if (num % i == 0){
-//			count++;
-//		}
-//		cout<<i<<"    "<<count<<endl;
+	multiple_count = 0;
+	for (int i=1; i<=num; i++){
+				
+		if (num % i == 0){
+			multiple_count++;
+		}		
 	}
 	
-//	if (count <= 2)
-//		cout<<num<<" es un número primo"<<endl;
-//	else
-//		cout<<num<<" no es un número primo"<<endl;
-
+	if (multiple_count <= 2)
+		cout<<num<<" es un número primo"<<endl;
+	else
+		cout<<num<<" no es un número primo"<<endl;
 }

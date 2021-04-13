@@ -11,32 +11,33 @@ using namespace std;
 
 main ()
 {
-	int num, value, aux;
-	
-	
+	int levels, stars, total, spaces;
+		
 	do 
 	{
-		cout<<"Ingrese número natural: "<<endl;
-		cin>>num;
-	} while (num<=0);
+		cout<<"Ingrese la cantidad de niveles para la pirámide de asteriscos: "<<endl;
+		cin>>levels;
+	} while (levels<=0);
 	
-	for(int i=1; i<=num; i++)
+	
+	total = levels * 2 - 1;
+	stars = 1;
+	
+	for(int i=0; i<levels; i++)
 	{
-		if(i>1)
+		spaces = floor((total - stars)/2);		
+	
+		for (int j=1; j<=spaces; j++)
 		{
-//			for(int j=0; j<=floor(num/2); j++)
-//			{
-//				cout<<" ";
-//			}
-			
-			cout<<"*";
-			for(int j=0; j<=i-2; j++)
-			{
-				cout<<"*";
-			}
-			cout<<"*"<<endl;
+			cout<<" ";
 		}
-		else
-			cout<<"*"<<endl;
+		
+		for (int k=1; k<=stars; k++)
+		{
+			cout<<"*";
+		}
+		
+		cout<<endl;	
+		stars += 2;	
 	}
 }
